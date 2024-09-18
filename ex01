@@ -1,0 +1,20 @@
+def fibonacci(n):
+    fib_sequencia = [0, 1]
+    while fib_sequencia[-1] < n:
+        prox_valor = fib_sequencia[-1] + fib_sequencia[-2]
+        fib_sequencia.append(prox_valor)
+
+    return fib_sequencia
+
+def em_fibonacci(number):
+    fib_sequencia = fibonacci(number)
+
+    if number in fib_sequencia:
+        return f"O número {number} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {number} NÃO pertence à sequência de Fibonacci."
+    
+
+numero = int(input("Informe um número: "))
+resultado = em_fibonacci(numero)
+print(resultado)
